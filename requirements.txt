@@ -1,0 +1,10 @@
+environs==8.0.0
+flake8==3.8.3
+Flask==1.1.2
+Flask-PyMongo==2.3.0
+flask-swagger-ui==3.25.0
+gunicorn==20.0.4
+mongoengine==0.20.0
+requests==2.24.0
+selectolax==0.2.4
+wheel==0.34.2

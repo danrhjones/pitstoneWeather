@@ -1,0 +1,6 @@
+set up a cron job to download daily hayfevers '/hayfever/download'
+set up a cron job to download daily stats for yesterday '/history/download'
+
+
+update swagger
+add tests!

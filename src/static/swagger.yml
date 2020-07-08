@@ -1,0 +1,55 @@
+---
+openapi: 3.0.0
+info:
+  description: This api will do stuff
+  version: 1.0.0
+  title: wunderweather API
+servers:
+  - url: "/"
+tags:
+  - name: Wunderground PWS
+    description: return data from personal weather station
+paths:
+  "/weather/now":
+    get:
+      summary: Get the weather from the PWS for right now
+      responses:
+        '200':
+          description: OK
+        '400':
+          description: Bad request. must be one of e m or h
+    parameters:
+      - name: units
+        in: query
+        required: true
+        description: units eg, e = English units m = Metric units h = Hybrid units (UK)
+  "/weather/today":
+    get:
+      summary: Get the weather from the PWS for today
+      responses:
+        '200':
+          description: OK
+        '400':
+          description: Bad request. must be one of e m or h
+    parameters:
+      - name: units
+        in: query
+        required: true
+        description: units eg, e = English units m = Metric units h = Hybrid units (UK)
+components:
+  schemas:
+    collectionResponse:
+      type: object
+      properties:
+        collection:
+          type: array
+          items:
+            type: string
+        date:
+          type: string
+          format: date
+        led:
+          type: array
+          items:
+            type: string
+
