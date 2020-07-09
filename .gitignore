@@ -1,5 +1,5 @@
 
-
+.flaskenv
 .idea
 *.iml
 .env
